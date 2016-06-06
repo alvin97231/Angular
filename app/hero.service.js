@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map', 'rxjs/add/operator/catch', 'rxjs/Observable'], function(exports_1, context_1) {
+System.register(['angular2/core', './mock-heroes'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,58 +10,37 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map', 'rxj
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, http_2, Observable_1;
+    var core_1, mock_heroes_1;
     var HeroService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (http_1_1) {
-                http_1 = http_1_1;
-                http_2 = http_1_1;
-            },
-            function (_1) {},
-            function (_2) {},
-            function (Observable_1_1) {
-                Observable_1 = Observable_1_1;
+            function (mock_heroes_1_1) {
+                mock_heroes_1 = mock_heroes_1_1;
             }],
         execute: function() {
             HeroService = (function () {
-                function HeroService(http) {
-                    this.http = http;
-                    this.heroesUrl = 'http://127.0.0.1/Symfony/web/app_dev.php/utilisateur?login=bitch&pwd=bitch';
+                function HeroService() {
                 }
                 HeroService.prototype.getHeroes = function () {
-                    console.log(this.http.get(this.heroesUrl)
-                        .map(this.extractData));
-                    return this.http.get(this.heroesUrl)
-                        .map(this.extractData)
-                        .catch(this.handleError);
+                    console.log(Promise.resolve(mock_heroes_1.HEROES));
+                    return Promise.resolve(mock_heroes_1.HEROES);
                 };
-                HeroService.prototype.addHero = function (name) {
-                    var body = JSON.stringify({ name: name });
-                    var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
-                    var options = new http_2.RequestOptions({ headers: headers });
-                    return this.http.post(this.heroesUrl, body, options)
-                        .map(this.extractData)
-                        .catch(this.handleError);
+                HeroService.prototype.getHeroesSlowly = function () {
+                    return new Promise(function (resolve) {
+                        return setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 2000);
+                    } // 2 seconds
+                     // 2 seconds
+                    );
                 };
-                HeroService.prototype.extractData = function (res) {
-                    var body = res.json();
-                    return body.data || {};
-                };
-                HeroService.prototype.handleError = function (error) {
-                    // In a real world app, we might use a remote logging infrastructure
-                    // We'd also dig deeper into the error to get a better message
-                    var errMsg = (error.message) ? error.message :
-                        error.status ? error.status + " - " + error.statusText : 'Server error';
-                    console.error(errMsg); // log to console instead
-                    return Observable_1.Observable.throw(errMsg);
+                HeroService.prototype.getHero = function (id) {
+                    return Promise.resolve(mock_heroes_1.HEROES).then(function (heroes) { return heroes.filter(function (hero) { return hero.id === id; })[0]; });
                 };
                 HeroService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http])
+                    __metadata('design:paramtypes', [])
                 ], HeroService);
                 return HeroService;
             }());
@@ -69,12 +48,4 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map', 'rxj
         }
     }
 });
-/*
-  private heroesUrl = 'app/heroes.json'; // URL to JSON file
-*/
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
 //# sourceMappingURL=hero.service.js.map

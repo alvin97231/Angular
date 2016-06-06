@@ -1,0 +1,9 @@
+<h3>Top Ideas</h3>
+<div class="grid grid-pad">
+  <div *ngFor="#hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.title}}</h4>
+      <h4>{{hero.content}}</h4>
+    </div>
+  </div>
+</div>

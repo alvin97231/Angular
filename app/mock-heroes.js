@@ -6,16 +6,66 @@ System.register([], function(exports_1, context_1) {
         setters:[],
         execute: function() {
             exports_1("HEROES", HEROES = [
-                { 'id': 11, 'name': 'Mr. Nice' },
-                { 'id': 12, 'name': 'Narco' },
-                { 'id': 13, 'name': 'Bombasto' },
-                { 'id': 14, 'name': 'Celeritas' },
-                { 'id': 15, 'name': 'Magneta' },
-                { 'id': 16, 'name': 'RubberMan' },
-                { 'id': 17, 'name': 'Dynama' },
-                { 'id': 18, 'name': 'Dr IQ' },
-                { 'id': 19, 'name': 'Magma' },
-                { 'id': 20, 'name': 'Tornado' }
+                {
+                    "id": 1,
+                    "user_id": 3,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 2,
+                    "user_id": 3,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 3,
+                    "user_id": 2,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 4,
+                    "user_id": 1,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 5,
+                    "user_id": 5,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 6,
+                    "user_id": 6,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 7,
+                    "user_id": 1,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 8,
+                    "user_id": 1,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 9,
+                    "user_id": 4,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                },
+                {
+                    "id": 10,
+                    "user_id": 4,
+                    "title": "You're my bitch negger",
+                    "content": "K*** my ass number 3"
+                }
             ]);
         }
     }

@@ -1,6 +1,6 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-import {HTTP_PROVIDERS} from 'angular2/http';
+
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
@@ -16,11 +16,10 @@ import { HeroService } from './hero.service';
     </nav>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['app/app.component.css'],
+  styleUrls: ['app/styles/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    HTTP_PROVIDERS,
     HeroService
   ]
 })
@@ -43,5 +42,5 @@ import { HeroService } from './hero.service';
   }
 ])
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'Ideas Share';
 }

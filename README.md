@@ -1,31 +1,7 @@
-# Angular Framework Project
+# Getting Started
 
-Project de Licence Professionnelle PRISM
+1. Fork and clone this repo
 
-## How to install
+1. Use `npm i` to install the necessary dependencies
 
-Clonez ce dépôt sur votre poste
-```bash
-$ git clone  https://github.com/alvin97231/Angular.git
-```
-
-Installer le projet
-```bash
-$ npm install
-```
-
-Lancer le projet
-```bash
-$ npm start
-```
-
-## Gestion de version
-
-Create a *remote repository* for this project on the service of your choice.
-
-```bash
-$ git remote add angular https://github.com/alvin97231/Angular.git
-$ git push angular master
-```
-
-
+1. Run the TypeScript compiler, watch for changes, start the server, and launch the browser by using `npm start`
