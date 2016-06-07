@@ -31,6 +31,7 @@ System.register(['angular2/core', 'angular2/router', './models/hero', './hero.se
                 function HeroDetailComponent(_heroService, _routeParams) {
                     this._heroService = _heroService;
                     this._routeParams = _routeParams;
+                    this.comment = '';
                 }
                 HeroDetailComponent.prototype.ngOnInit = function () {
                     var _this = this;
@@ -42,10 +43,13 @@ System.register(['angular2/core', 'angular2/router', './models/hero', './hero.se
                     window.history.back();
                 };
                 HeroDetailComponent.prototype.increase = function () {
-                    this.hero;
+                    this.hero.vote += 1;
                 };
                 HeroDetailComponent.prototype.decrease = function () {
-                    window.history.back();
+                    this.hero.vote -= 1;
+                };
+                HeroDetailComponent.prototype.addComment = function (comment) {
+                    this.hero.comments.push(comment);
                 };
                 __decorate([
                     core_1.Input(), 

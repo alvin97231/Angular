@@ -9,9 +9,12 @@ import { HeroService } from './hero.service';
   templateUrl: 'app/views/hero-detail.component.html',
   styleUrls: ['app/styles/hero-detail.component.css']
 })
+
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
 
+  comment = '';
+  
   constructor(
     private _heroService: HeroService,
     private _routeParams: RouteParams) {
@@ -28,10 +31,14 @@ export class HeroDetailComponent implements OnInit {
   }
 
   increase() {
-    this.hero;
+    this.hero.vote += 1;
   }
 
   decrease() {
-    window.history.back();
+    this.hero.vote -= 1;
+  }
+
+  addComment(comment){
+    this.hero.comments.push(comment)
   }
 }

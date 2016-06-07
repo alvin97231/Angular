@@ -1,19 +1,33 @@
 <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
-  <div>
-    <label>id: </label>{{hero.id}}
-  </div>
+  <button (click)="increase()">+1</button>
+  <button (click)="decrease()">-1</button>
   <div>
     <label>title: </label>
-    <span>{{hero.title}}</span>
+    <p>{{hero.title}}</p>
   </div>
   <div>
     <label>content: </label>
-    <span>{{hero.content}}</span>
+    <p>{{hero.content}}</p>
   </div>
   <div>
-    <button (click)="increase()">+1</button>
-    <button (click)="decrease()">-1</button>
+    <label>comment:</label>
+    <input [(ngModel)]="comment" placeholder="add a comment" />
+    <button (click)="addComment(comment)">Add!</button>
+  </div>
+  <div>
+    <label>Score: </label>
+    <span>{{hero.vote}}</span>
+  </div>
+  <div>
+    <label>Comments: </label>
+    <div *ngIf="hero.comments">
+      <p *ngFor="#comment of hero.comments">
+        {{comment}}
+        <!--<button (click)="increaseComment()">+1</button>
+        <button (click)="decreaseComment()">-1</button>-->
+      </p>
+    </div>
   </div>
   <button (click)="goBack()">Back</button>
 </div>

@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'my-app',
