@@ -11,8 +11,8 @@ import { HeroService } from './hero.service';
   template: `
     <h1>{{title}}</h1>
     <nav>
-      <a [routerLink]="['Dashboard']">Dashboard</a>
-      <a [routerLink]="['Heroes']">Heroes</a>
+      <a [routerLink]="['Dashboard']">Home</a>
+      <a [routerLink]="['Heroes']">Ideas</a>
     </nav>
     <router-outlet></router-outlet>
   `,

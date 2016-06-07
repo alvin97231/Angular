@@ -33,7 +33,7 @@ System.register(['angular2/core', 'angular2/router', './hero.service'], function
                 DashboardComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     this._heroService.getHeroes()
-                        .then(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
+                        .then(function (heroes) { return _this.heroes = heroes; });
                 };
                 DashboardComponent.prototype.gotoDetail = function (hero) {
                     var link = ['HeroDetail', { id: hero.id }];
