@@ -14,7 +14,7 @@ export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
 
   comment = '';
-  
+
   constructor(
     private _heroService: HeroService,
     private _routeParams: RouteParams) {
@@ -38,7 +38,7 @@ export class HeroDetailComponent implements OnInit {
     this.hero.vote -= 1;
   }
 
-  addComment(comment){
-    this.hero.comments.push(comment)
+  addComment(){
+    this.hero.comments.push(this.comment)
   }
 }

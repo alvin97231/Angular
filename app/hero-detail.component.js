@@ -48,8 +48,8 @@ System.register(['angular2/core', 'angular2/router', './models/hero', './hero.se
                 HeroDetailComponent.prototype.decrease = function () {
                     this.hero.vote -= 1;
                 };
-                HeroDetailComponent.prototype.addComment = function (comment) {
-                    this.hero.comments.push(comment);
+                HeroDetailComponent.prototype.addComment = function () {
+                    this.hero.comments.push(this.comment);
                 };
                 __decorate([
                     core_1.Input(), 
