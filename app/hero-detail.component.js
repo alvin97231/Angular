@@ -41,6 +41,12 @@ System.register(['angular2/core', 'angular2/router', './models/hero', './hero.se
                 HeroDetailComponent.prototype.goBack = function () {
                     window.history.back();
                 };
+                HeroDetailComponent.prototype.increase = function () {
+                    this.hero;
+                };
+                HeroDetailComponent.prototype.decrease = function () {
+                    window.history.back();
+                };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', hero_1.Hero)

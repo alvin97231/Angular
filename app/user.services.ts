@@ -9,9 +9,9 @@ export class UserService {
     return Promise.resolve(USERS);
   }
 
-  getUser(id: number) {
-    return Promise.resolve(USERS).then(
-      users => user.filter(user => user.id === id)[0]
-    );
-  }
+  //getUser(id: number) {
+    //return Promise.resolve(USERS).then(
+      //users => user.filter(user => user.id === id)[0]
+    //);
+  //}
 }

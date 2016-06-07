@@ -26,4 +26,12 @@ export class HeroDetailComponent implements OnInit {
   goBack() {
     window.history.back();
   }
+
+  increase() {
+    this.hero;
+  }
+
+  decrease() {
+    window.history.back();
+  }
 }
